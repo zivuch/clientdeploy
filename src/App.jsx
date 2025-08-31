@@ -5,9 +5,9 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [header, setHeader] = useState(0);
+  const [header, setHeader] = useState("Hallelujah");
 
-  useEffect(() => fetchData(), []);
+  // useEffect(() => fetchData(), []);
 
   const fetchData = () => {
     fetch("https://serverdeploy-ymxy.onrender.com/test")
@@ -40,6 +40,7 @@ function App() {
       <p className='read-the-docs'>
         Click on the Vite and React logos to learn more
       </p>
+      <button onClick={() => fetchData()}>Click</button>
     </>
   );
 }
